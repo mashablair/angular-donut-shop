@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   template: `
     <div class="app">
-      <h1>{{ newMessage.length ? newMessage : message }}</h1>
-      <input type="text" [value]="message" (input)="handleInput($event)" />
+      <donut-list></donut-list>
     </div>
   `,
   styles: [
