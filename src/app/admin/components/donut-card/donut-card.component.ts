@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Donut } from '../../models/donut.model';
 
 @Component({
   selector: 'donut-card',
-  template: ` <img
+  template: ` <div class="donut-card" [class.donut-card-promo]="donut.promo">
+    <img
       src="/assets/img/{{ donut.icon }}.svg"
       [alt]="donut.name"
       class="donut-card-icon"
@@ -15,10 +16,11 @@ import { Donut } from '../../models/donut.model';
       <p class="donut-card-price">
         {{ donut.price }}
       </p>
-    </div>`,
+    </div>
+  </div>`,
   styles: [
     `
-      :host {
+      .donut-card {
         display: flex;
         align-items: center;
         background: #f7f7f7;
@@ -29,8 +31,6 @@ import { Donut } from '../../models/donut.model';
         &:hover {
           transform: translateY(-3px);
         }
-      }
-      .donut-card {
         &-name {
           font-size: 16px;
         }
@@ -41,6 +41,8 @@ import { Donut } from '../../models/donut.model';
         &-icon {
           width: 50px;
           margin-right: 10px;
+        }
+        &-promo {
         }
       }
     `,
