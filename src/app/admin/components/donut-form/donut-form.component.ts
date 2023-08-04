@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'donut-form',
@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
         <span>Name</span>
         <input type="text" name="name" class="input" ngModel />
       </label>
+
+      <label for="">
+        <span>Icon</span>
+        <select name="icon" class="input input--select" ngModel>
+          <option *ngFor="let icon of icons" [ngValue]="icon">
+            {{ icon }}
+          </option>
+        </select>
+      </label>
+
       <label>
         <span>Price</span>
         <input type="number" name="price" class="input" ngModel />
@@ -53,4 +63,16 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class DonutFormComponent {}
+export class DonutFormComponent implements OnInit {
+  icons: string[] = [
+    'caramel-swirl',
+    'glazed-fudge',
+    'just-chocolate',
+    'sour-supreme',
+    'strawberry-glaze',
+    'vanilla-sundae',
+    'zesty-lemon',
+  ];
+
+  ngOnInit(): void {}
+}
