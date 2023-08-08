@@ -63,4 +63,9 @@ export class DonutService {
       description: '',
     };
   }
+
+  create(payload: Donut) {
+    this.donuts = [...this.donuts, payload];
+    console.log(this.donuts);
+  }
 }
