@@ -36,14 +36,6 @@
       "icon": "zesty-lemon",
       "price": 129,
       "description": "Delicious lucious lemon."
-    },
-    {
-      "name": "Masha Donut",
-      "icon": "just-chocolate",
-      "price": 229,
-      "promo": "new",
-      "description": "Masha's creation!",
-      "id": "ZntYFnw"
     }
   ]
 }
