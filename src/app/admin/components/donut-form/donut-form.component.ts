@@ -125,7 +125,7 @@ import { Donut } from '../../models/donut.model';
         Update
       </button>
 
-      <button type="button" class="btn btn--red" (click)="handleDelete()">
+      <button type="button" class="btn btn--green" (click)="handleDelete()">
         Delete
       </button>
 

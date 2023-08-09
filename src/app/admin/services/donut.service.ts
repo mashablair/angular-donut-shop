@@ -42,9 +42,13 @@ export class DonutService {
     );
   }
 
+  // so this does both things: 1) adds a donut to db.json via post() and adds this donut to our local State via .pipe & tap
   create(payload: Donut) {
-    this.donuts = [...this.donuts, payload];
-    console.log(this.donuts);
+    return this.http.post<Donut>(`/api/donuts`, payload).pipe(
+      tap((donut) => {
+        this.donuts = [...this.donuts, donut];
+      })
+    );
   }
 
   update(payload: Donut) {
