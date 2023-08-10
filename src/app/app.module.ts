@@ -28,6 +28,10 @@ export const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'admin',
   },
+  {
+    path: '**',
+    redirectTo: 'admin',
+  },
 ];
 
 @NgModule({
