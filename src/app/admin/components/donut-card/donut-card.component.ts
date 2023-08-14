@@ -3,7 +3,11 @@ import { Donut } from '../../models/donut.model';
 
 @Component({
   selector: 'donut-card',
-  template: ` <div class="donut-card" [class.donut-card-promo]="donut.promo">
+  template: ` <a
+    class="donut-card"
+    [routerLink]="donut.id"
+    [ngClass]="{ 'donut-card-promo': donut.promo }"
+  >
     <img
       src="/assets/img/{{ donut.icon }}.svg"
       [alt]="donut.name"
@@ -24,7 +28,7 @@ import { Donut } from '../../models/donut.model';
         {{ donut.price / 100 | currency : 'USD' }}
       </p>
     </div>
-  </div>`,
+  </a>`,
   styles: [
     `
       .donut-card {
