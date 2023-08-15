@@ -12,9 +12,9 @@
       "id": "3u98Kl",
       "name": "Glazed Fudge",
       "icon": "glazed-fudge",
-      "price": 129,
-      "description": "Sticky perfection.",
-      "promo": "new"
+      "price": 128,
+      "promo": "new",
+      "description": "Sticky perfection."
     },
     {
       "id": "ae098s",
@@ -36,6 +36,14 @@
       "icon": "zesty-lemon",
       "price": 129,
       "description": "Delicious lucious lemon."
+    },
+    {
+      "name": "Masha",
+      "icon": "vanilla-sundae",
+      "price": 1000,
+      "promo": "limited",
+      "description": "Tasty!",
+      "id": "rjnOTOA"
     }
   ]
 }
